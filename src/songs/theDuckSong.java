@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class theDuckSong {
 
+    public static void main(String[] args) {
+        theDuckSong duckduck = new theDuckSong();
+        duckduck.duck();
+    }
+
     private void duck() {
 
         Scanner duckScanner = new Scanner(System.in);
@@ -42,15 +47,9 @@ public class theDuckSong {
                 }
 
                 System.out.println("And only " + newDuck + " little " + numberOfDucks + " came " + back + ".");
-
             }
 
             System.out.println("");
         }
-    }
-
-    public static void main(String[] args) {
-        theDuckSong duckduck = new theDuckSong();
-        duckduck.duck();
     }
 }
