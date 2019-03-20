@@ -5,6 +5,7 @@ package games;
 
 public class rockPaperScissors {
 
+    // these strings are accessible any from anywhere within the programme where it is called
     String playerName; //define string variables
     String playerMove;
     String computerMove;
@@ -17,13 +18,13 @@ public class rockPaperScissors {
     }
 
 
-    private void initialiseGame(){
+    private void initialiseGame(){ // private means these can only be accessed by the rockPaperScissors class
         System.out.println("Enter your name: ");
         playerName = myScanner.nextLine(); // uses scanner to input into playerName
         playGame(); // method
     }
 
-    private void playGame(){
+    private void playGame(){ // void implies there is no return value from this method
         System.out.println("Enter your move: "); // inputs move
         playerMove = myScanner.nextLine();
         System.out.println(playerName + " has selected " + playerMove + " as their move"); // outputs move
@@ -31,14 +32,14 @@ public class rockPaperScissors {
         String result = getWinner(playerMove, computerMove);
         if(result.equalsIgnoreCase("Win")){
             System.out.println("Congratulations, you won this round!"); // prints result
-            score++; // increase score by 1 unit from
+            score++; // increase score by 1 unit
         }
         else if(result.equalsIgnoreCase("Lose")){
             System.out.println("You lost this round!");
-            score--;
+            score--; // decrease score by 1 unit
         }
         else {
-            System.out.println("This round was a draw!");
+            System.out.println("This round was a draw!"); //print string and dont change score
         }
 
         if(score < 3 && score > -3){ // loops the game until the score variable reaches 3 or -3
