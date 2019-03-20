@@ -13,6 +13,7 @@ public class theDuckSong {
 
         Scanner duckScanner = new Scanner(System.in);
         System.out.println("How many ducks are there?");
+        System.out.println("");
         int ducks = duckScanner.nextInt();
         System.out.println("");
 
