@@ -19,14 +19,18 @@ public class theDuckSong {
         String numberOfDucks = "ducks";
         String back = "back";
 
+
         for (int i = ducks; i > -1; i--) {
 
+            String d = i + " little";
+
             if (i == 0) {
-                System.out.println("Mother duck went swimming one day,");
-            } else {
-                System.out.println(i + " little " + numberOfDucks + " went swimming one day,");
+                d = "Mother";
+               // System.out.println("Mother duck went swimming one day,");
             }
 
+
+            System.out.println( d + " " + numberOfDucks + " went swimming one day,");
             System.out.println("Over the hills and far away.");
             System.out.println("Mother duck said, 'quack quack quack quack',");
 
