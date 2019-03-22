@@ -29,34 +29,46 @@ public class createAnimal {
     private void createDog() {
         System.out.println("What is the dog's name?");
         String name = myScanner.nextLine();
-        System.out.println("How big is the dog?");
+        System.out.println("How big (small, medium or large) is the dog?");
         String size = myScanner.nextLine();
-        System.out.println("How old is the dog?");
-        int age = myScanner.nextInt();
-        System.out.println("What breed is the dog?");
+        System.out.println("How old (years) is the dog?");
+        int age = Integer.parseInt(myScanner.nextLine());
+        System.out.println("What breed (Poodle, Golden Retriever, Border Collie) is the dog?");
         String breed = myScanner.nextLine();
+
         dog myDog = new dog(name, size, age, breed);
 
         myDog.bark(size);
         myDog.play(breed);
         myDog.beHuman(name, age, breed);
+
+        System.out.println(myDog.bark(size));
+        System.out.println(myDog.play(breed));
+        System.out.println(myDog.beHuman(name, age, breed));
+
+        getAnimalType();
     }
 
 
     private void createCat() {
         System.out.println("What is the cat's name?");
         String name = myScanner.nextLine();
-        System.out.println("How old is the cat?");
-        int age = myScanner.nextInt();
-        System.out.println("How much does the cat weigh?");
+        System.out.println("How old is the cat (years)?");
+        int age = Integer.parseInt(myScanner.nextLine());
+        System.out.println("How much does the cat weigh (kilograms)?");
         float weight = myScanner.nextFloat();
-        System.out.println("Is the cat awake?");
-        Boolean awake = myScanner.nextBoolean();
+        System.out.println("Is the cat awake (true or false)?");
+        boolean awake = myScanner.nextBoolean();
 
         cat myCat = new cat(name, age, weight, awake);
 
         myCat.play(awake);
         myCat.beHuman(name, age, awake);
+
+        System.out.println(myCat.play(awake));
+        System.out.println(myCat.beHuman(name, age, awake));
+
+        getAnimalType();
     }
 
 
