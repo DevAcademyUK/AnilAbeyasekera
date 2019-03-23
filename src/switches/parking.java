@@ -15,61 +15,72 @@ public class parking {
     private void getInput() {
         System.out.println("What day is it?");
         String day = myScanner.nextLine();
+        day.toLowerCase();
         System.out.println("How long will you be staying?");
         int duration = Integer.parseInt(myScanner.nextLine());
         System.out.println("What position do you hold within the college? (Staff/Student/Visitor)");
         String position = myScanner.nextLine();
+        position.toLowerCase();
+
         calculateFees(day, duration, position);
     }
 
     private void calculateFees(String day, int duration, String position) {
 
         int cost;
-        int hourlyrate;
-        int multiplier;
+        int hourlyrate = 0;
+        int multiplier = 0;
 
         switch (position) {
-            case "Staff":
+            case "staff":
                 multiplier = 2;
                 break;
 
-            case "Student":
+            case "student":
                 multiplier = 1;
                 break;
 
-            case "Visitor":
+            case "visitor":
                 multiplier = 3;
                 break;
+
+            default:
+                System.out.println("Invalid input for position, aborting, please retry.");
+                getInput();
         }
 
         switch (day) {
-            case "Monday":
+            case "monday":
                 hourlyrate = 2;
                 break;
 
-            case "Tuesday":
+            case "tuesday":
                 hourlyrate = 2;
                 break;
 
-            case "Wednesday":
+            case "wednesday":
                 hourlyrate = 3;
                 break;
 
-            case "Thursday":
+            case "thursday":
                 hourlyrate = 2;
                 break;
 
-            case "Friday":
+            case "friday":
                 hourlyrate = 3;
                 break;
 
-            case "Saturday":
+            case "saturday":
                 hourlyrate = 4;
                 break;
 
-            case "Sunday":
+            case "sunday":
                 hourlyrate = 5;
                 break;
+
+            default:
+                System.out.println("Invalid input for day, aborting, please retry.");
+                getInput();
         }
 
         cost = (hourlyrate * multiplier) * duration;
