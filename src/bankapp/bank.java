@@ -1,5 +1,6 @@
 package bankapp;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,10 +13,24 @@ public class bank {
     private Integer transferAmount;
 
     Scanner myScanner = new Scanner(System.in);
+    ArrayList<users> accountList;
 
     public static void main(String[] args) {
         bank s = new bank();
         s.init();
+    }
+
+    // Constuctor
+    private void accounts(){
+        users account1 = new users("Brandon", "hkvv", 0, 0, 0);
+        users account2 = new users("Brendan", "hvkv", 0, 0, 0);
+        users account3 = new users("Brenden", "hklv", 0, 0, 0);
+        users account4 = new users("Branden", "hfvv", 0, 0, 0);
+        accountList = new ArrayList<>();
+        accountList.add(account1);
+        accountList.add(account2);
+        accountList.add(account3);
+        accountList.add(account4);
     }
 
 
