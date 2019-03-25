@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class bank {
 
-
+    //Declaration of transaction amounts
     private Integer depositAmount;
     private Integer withdrawAmount;
     private Integer transferAmount;
@@ -33,6 +33,7 @@ public class bank {
     }
 */
 
+   //Login initialisation
     private void init() {
 
 
@@ -52,6 +53,7 @@ public class bank {
         }
     }
 
+    //Main Menu Screen
     private void mainMenu() {
         System.out.println();
         System.out.println("What would you like to do?");
@@ -61,6 +63,7 @@ public class bank {
         getAction(input);
     }
 
+    //To choose the bank function
     private void getAction(String input) {
         switch (input) {
 
@@ -95,6 +98,7 @@ public class bank {
         }
     }
 
+    //Check Balance Method for all accounts
     private void checkBalance() {
         System.out.println();
         System.out.println("Which account would you like to check the balance of?");
@@ -140,7 +144,7 @@ public class bank {
         }
     }
 
-
+    ////Deposit Method for all accounts
     private void deposit() {
 
         System.out.println("Which account would you like to make a deposit to?");
@@ -191,6 +195,7 @@ public class bank {
         }
     }
 
+    ////Withdraw Method for all accounts
     private void withdraw() {
         System.out.println();
 
@@ -258,7 +263,7 @@ public class bank {
         }
     }
 
-
+    ////Transfer Method for all accounts
     private void transfer() {
         System.out.println();
 
@@ -391,6 +396,7 @@ public class bank {
         }
     }
 
+    //Logout method
     private void logout() {
         System.out.println();
         System.out.println("Logging Out...");
