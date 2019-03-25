@@ -7,32 +7,31 @@ import java.util.Scanner;
 public class bank {
 
 
-
     private Integer depositAmount;
     private Integer withdrawAmount;
     private Integer transferAmount;
 
-    Scanner myScanner = new Scanner(System.in);
-    ArrayList<users> accountList;
+    private Scanner myScanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         bank s = new bank();
         s.init();
     }
 
-    // Constuctor
-    private void accounts(){
+
+    // Constructor
+   /* public bank() {
         users account1 = new users("Brandon", "hkvv", 0, 0, 0);
         users account2 = new users("Brendan", "hvkv", 0, 0, 0);
         users account3 = new users("Brenden", "hklv", 0, 0, 0);
         users account4 = new users("Branden", "hfvv", 0, 0, 0);
-        accountList = new ArrayList<>();
-        accountList.add(account1);
-        accountList.add(account2);
-        accountList.add(account3);
-        accountList.add(account4);
+        user = new ArrayList<>();
+        user.add(account1);
+        user.add(account2);
+        user.add(account3);
+        user.add(account4);
     }
-
+*/
 
     private void init() {
 
@@ -43,7 +42,6 @@ public class bank {
         String enteredPassword = myScanner.nextLine();
 
 
-
         if (users.validateLoginDetails(enteredUsername, enteredPassword)) {
             mainMenu();
         } else {
@@ -51,15 +49,6 @@ public class bank {
             System.out.println("Invalid details have been entered. Please try again");
             init();
 
-        }
-    }
-
-    private static boolean isNumeric(String str) {
-        try {
-            Integer.parseInt(str);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
         }
     }
 
@@ -172,7 +161,7 @@ public class bank {
             String depositAmount1 = myScanner.nextLine();
 
 
-            if (!(isNumeric(depositAmount1) && Integer.parseInt(depositAmount1) > 0)) {
+            if (!(users.isNumeric(depositAmount1) && Integer.parseInt(depositAmount1) > 0)) {
                 System.out.println();
                 System.out.println("Invalid deposit amount entered.");
                 deposit();
@@ -222,7 +211,7 @@ public class bank {
             String withdrawAmount1 = myScanner.nextLine();
 
 
-            if (!(isNumeric(withdrawAmount1) && Integer.parseInt(withdrawAmount1) > 0)) {
+            if (!(users.isNumeric(withdrawAmount1) && Integer.parseInt(withdrawAmount1) > 0)) {
                 System.out.println();
                 System.out.println("Invalid withdraw amount entered.");
                 withdraw();
@@ -307,7 +296,7 @@ public class bank {
                 String transferAmount1 = myScanner.nextLine();
 
 
-                if (!(isNumeric(transferAmount1) && Integer.parseInt(transferAmount1) > 0)) {
+                if (!(users.isNumeric(transferAmount1) && Integer.parseInt(transferAmount1) > 0)) {
                     System.out.println();
                     System.out.println("Invalid transfer amount entered.");
                     transfer();
