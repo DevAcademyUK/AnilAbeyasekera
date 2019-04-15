@@ -24,6 +24,7 @@ public class users {
     //Method to validate login details
     static boolean validateLoginDetails(String enteredUsername, String enteredPassword) {
 
+
         String username = "User";
         String password = "password";
 
