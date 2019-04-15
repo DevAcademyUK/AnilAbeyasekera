@@ -15,7 +15,7 @@ class ChangeDetails {
         System.out.println("4. View your information");
         System.out.println("5. Log out");
         String choice = myScanner.nextLine();
-        switch (choice){
+        switch (choice) {
             case "1":
                 changeName(id);
                 menu1(id);
@@ -44,8 +44,8 @@ class ChangeDetails {
     }
 
     void viewInfo(int id) {
-        for (Employee a : Login.employeeList){
-            if (id == a.getId()){
+        for (Employee a : Login.employeeList) {
+            if (id == a.getId()) {
                 System.out.println("Name: " + a.getTitle() + " " + a.getForename() + " " + a.getSurname());
                 System.out.println("Address: " + a.getAddress1() + ", " + a.getTown() + ", " + a.getCounty() + ", " +
                         a.getPostcode());
@@ -56,9 +56,9 @@ class ChangeDetails {
         }
     }
 
-    void changeName(int id){
-        for (Employee a : Login.employeeList){
-            if (id == a.getId()){
+    void changeName(int id) {
+        for (Employee a : Login.employeeList) {
+            if (id == a.getId()) {
 
                 System.out.println("Title:");
                 String title = myScanner.nextLine();
@@ -77,8 +77,8 @@ class ChangeDetails {
     }
 
     void changeAddress(int id) {
-        for (Employee a : Login.employeeList){
-            if (id == a.getId()){
+        for (Employee a : Login.employeeList) {
+            if (id == a.getId()) {
 
                 System.out.println("Address:");
                 String address1 = myScanner.nextLine();

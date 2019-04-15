@@ -16,7 +16,7 @@ class ChangeDetailsManager extends ChangeDetailsHR {
         System.out.println("6. Log out");
 
         String choice = myScanner.nextLine();
-        switch (choice){
+        switch (choice) {
             case "1":
                 System.out.println("What would you like to change?");
                 System.out.println("1. Change your name");
@@ -24,7 +24,7 @@ class ChangeDetailsManager extends ChangeDetailsHR {
                 System.out.println("3. Change your contact information");
                 System.out.println("4. Go back");
                 String choice1 = myScanner.nextLine();
-                switch (choice1){
+                switch (choice1) {
                     case "1":
                         changeName(id);
                         menu3(id);
@@ -151,173 +151,147 @@ class ChangeDetailsManager extends ChangeDetailsHR {
         String choice3 = myScanner.nextLine();
         System.out.println("1. Ascending, 2. Descending");
         String choice4 = myScanner.nextLine();
-        switch (choice3){
+        switch (choice3) {
             case "1":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareID);
 
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareID.reversed());
 
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "2":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareTitle);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareTitle.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "3":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareForename);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareForename.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "4":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareSurname);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareSurname.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "5":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareAddress);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareAddress.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "6":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareTown);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareTown.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "7":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareCounty);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareCounty.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "8":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.comparePostcode);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.comparePostcode.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "9":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareNumber);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareNumber.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "10":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareEmail);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareEmail.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "11":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareDOB);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareDOB.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "12":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.compareStartDate);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.compareStartDate.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
                 break;
 
             case "13":
-                if (choice4.equals("1")){
+                if (choice4.equals("1")) {
                     Collections.sort(Login.employeeList, Employee.comparePosition);
-                }
-                else if (choice4.equals("2")){
+                } else if (choice4.equals("2")) {
                     Collections.sort(Login.employeeList, Employee.comparePosition.reversed());
-                }
-                else {
+                } else {
                     System.out.println("Invalid input");
                     viewData();
                 }
@@ -330,9 +304,9 @@ class ChangeDetailsManager extends ChangeDetailsHR {
 
         }
 
-        for (Employee a : Login.employeeList){
+        for (Employee a : Login.employeeList) {
             System.out.println(a.id + " " + a.title + " " + a.forename + " " + a.surname + ", " + a.address1 +
-                    ", " + a.town + ", " + a.county + ", " + a.postcode + ", " + a.number + ", " + a.email  +
+                    ", " + a.town + ", " + a.county + ", " + a.postcode + ", " + a.number + ", " + a.email +
                     ", " + a.dob + ", " + a.startDate + ", " + a.position);
             System.out.println();
         }

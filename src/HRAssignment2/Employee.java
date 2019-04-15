@@ -24,7 +24,7 @@ public class Employee {
 
     //Employee constructor
     Employee(String title, String forename, String surname, String dob, String address1, String town,
-             String county, String postcode, String number, String email, int id, String position, String startDate){
+             String county, String postcode, String number, String email, int id, String position, String startDate) {
         this.title = title;
         this.forename = forename;
         this.surname = surname;
@@ -79,8 +79,8 @@ public class Employee {
         @Override
         public int compare(Employee a, Employee b) {
 
-            Long employee1 = Long.parseLong(a.dob.replaceAll("\\s",""));
-            Long employee2 = Long.parseLong(b.dob.replaceAll("\\s",""));
+            Long employee1 = Long.parseLong(a.dob.replaceAll("\\s", ""));
+            Long employee2 = Long.parseLong(b.dob.replaceAll("\\s", ""));
 
 
             return employee1.compareTo(employee2);
@@ -171,8 +171,8 @@ public class Employee {
 
         @Override
         public int compare(Employee a, Employee b) {
-            Long employee1 = Long.parseLong(a.startDate.replaceAll("\\s",""));
-            Long employee2 = Long.parseLong(b.startDate.replaceAll("\\s",""));
+            Long employee1 = Long.parseLong(a.startDate.replaceAll("\\s", ""));
+            Long employee2 = Long.parseLong(b.startDate.replaceAll("\\s", ""));
 
 
             return employee1.compareTo(employee2);

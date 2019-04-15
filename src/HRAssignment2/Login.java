@@ -47,12 +47,11 @@ public class Login {
         System.out.println("Enter your id");
         String idString = myScanner.nextLine();
         if (!isNumeric(idString)) {
-        System.out.println("Invalid input");
-         menu();
-      }
-        else {
+            System.out.println("Invalid input");
+            menu();
+        } else {
 
-           int id = Integer.parseInt(idString);
+            int id = Integer.parseInt(idString);
             for (Employee a : employeeList) {
 
                 if (id == a.getId()) {

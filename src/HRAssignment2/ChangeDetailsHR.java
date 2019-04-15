@@ -3,7 +3,7 @@ package HRAssignment2;
 class ChangeDetailsHR extends ChangeDetails {
 
     //Menu for hr employees
-    void menu2(int id){
+    void menu2(int id) {
 
         System.out.println("What would you like to do?");
         System.out.println("1. Change your info");
@@ -13,7 +13,7 @@ class ChangeDetailsHR extends ChangeDetails {
         System.out.println("5. Log out");
 
         String choice = myScanner.nextLine();
-        switch (choice){
+        switch (choice) {
             case "1":
                 System.out.println("What would you like to change?");
                 System.out.println("1. Change your name");
@@ -21,7 +21,7 @@ class ChangeDetailsHR extends ChangeDetails {
                 System.out.println("3. Change your contact information");
                 System.out.println("4. Go back");
                 String choice1 = myScanner.nextLine();
-                switch (choice1){
+                switch (choice1) {
                     case "1":
                         changeName(id);
                         menu2(id);
