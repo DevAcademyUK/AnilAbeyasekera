@@ -121,6 +121,11 @@ class ChangeDetailsManager extends ChangeDetailsHR {
                 break;
 
             case "5":
+                viewInfo(id);
+                menu3(id);
+                break;
+
+            case "6":
                 Login logout = new Login();
                 logout.menu();
                 break;
@@ -324,9 +329,10 @@ class ChangeDetailsManager extends ChangeDetailsHR {
         }
 
         for (Employee a : Login.employeeList){
-            System.out.println(a.id + " " + a.title + " " + a.forename + " " + a.surname + " " + a.address1 +
-                    " " + a.town + " " + a.county + " " + a.postcode + " " + a.number + " " + a.email  +
-                    " " + a.dob + " " + a.startDate + " " + a.position);
+            System.out.println(a.id + " " + a.title + " " + a.forename + " " + a.surname + ", " + a.address1 +
+                    ", " + a.town + ", " + a.county + ", " + a.postcode + ", " + a.number + ", " + a.email  +
+                    ", " + a.dob + ", " + a.startDate + ", " + a.position);
+            System.out.println();
         }
 
     }

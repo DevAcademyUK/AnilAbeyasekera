@@ -55,11 +55,11 @@ public class Login {
             int id = Integer.parseInt(idString);
             for (Employee a : employeeList) {
                 if (id == a.getId()) {
-                    if (a.getPosition().equalsIgnoreCase("hr")) {
+                    if (a.getPosition().equals("hr")) {
                         System.out.println("Welcome " + a.getTitle() + " " + a.getForename() + " " + a.getSurname());
                         ChangeDetailsHR hr = new ChangeDetailsHR();
                         hr.menu2(id);
-                    } else if (a.getPosition().equalsIgnoreCase("hr manager")) {
+                    } else if (a.getPosition().equals("hr manager")) {
                         System.out.println("Welcome " + a.getTitle() + " " + a.getForename() + " " + a.getSurname());
                         ChangeDetailsManager manager = new ChangeDetailsManager();
                         manager.menu3(id);
