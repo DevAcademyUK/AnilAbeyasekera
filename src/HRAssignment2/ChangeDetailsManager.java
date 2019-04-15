@@ -140,6 +140,8 @@ class ChangeDetailsManager extends ChangeDetailsHR {
     }
 
     private void viewData() {
+        //For comparing date of birth and start date, consider switching ascending and descending?
+
         System.out.println("How would you like to sort the data?");
         System.out.println("1. Employee ID, 2. Title, 3. Forename, 4. Surname");
         System.out.println("5. Address, 6. Town/City, 7. County, 8. Postcode");

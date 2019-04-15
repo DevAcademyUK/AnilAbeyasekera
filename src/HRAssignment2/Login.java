@@ -46,32 +46,36 @@ public class Login {
     public void menu() {
         System.out.println("Enter your id");
         String idString = myScanner.nextLine();
-
         if (!isNumeric(idString)) {
-            System.out.println("Invalid input");
-            menu();
-        } else {
+        System.out.println("Invalid input");
+         menu();
+      }
+        else {
 
-            int id = Integer.parseInt(idString);
+           int id = Integer.parseInt(idString);
             for (Employee a : employeeList) {
+
                 if (id == a.getId()) {
                     if (a.getPosition().equals("hr")) {
                         System.out.println("Welcome " + a.getTitle() + " " + a.getForename() + " " + a.getSurname());
+                        System.out.println();
                         ChangeDetailsHR hr = new ChangeDetailsHR();
                         hr.menu2(id);
                     } else if (a.getPosition().equals("hr manager")) {
                         System.out.println("Welcome " + a.getTitle() + " " + a.getForename() + " " + a.getSurname());
+                        System.out.println();
                         ChangeDetailsManager manager = new ChangeDetailsManager();
                         manager.menu3(id);
                     } else {
                         System.out.println("Welcome " + a.getTitle() + " " + a.getForename() + " " + a.getSurname());
+                        System.out.println();
                         ChangeDetails employee = new ChangeDetails();
                         employee.menu1(id);
                     }
-                } else
-                    System.out.println("ID not found.");
-                menu();
+                }
             }
+            System.out.println("ID not found.");
+            menu();
         }
 
     }
